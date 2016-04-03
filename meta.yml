@@ -1,0 +1,9 @@
+elems:
+
+  - src: elems/(zathurarc)$
+    dst: ~/.<1>
+    only:
+      features:
+        - zathura
+
+# vim: set filetype=eruby.yaml :
