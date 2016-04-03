@@ -1,1 +1,6 @@
 # => inherits: generic, with-persistent-mixer-settings <= #
+
+fonts:
+  main:
+    name: PragmataPro
+    size: 13
