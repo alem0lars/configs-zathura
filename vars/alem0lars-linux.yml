@@ -1,4 +1,4 @@
-# => inherits: generic, with-persistent-mixer-settings <= #
+# => inherits: generic <= #
 
 fonts:
   main:
