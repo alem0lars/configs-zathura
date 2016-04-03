@@ -31,8 +31,8 @@
 "                                                                              │
 " ─────────────────────────────────────────────────────────────────────────────┤
 <% define_locals do
-  variable :"fonts.main.name", type: :bool, as: :font_name
-  variable :"fonts.main.size", type: :bool, as: :font_size
+  variable :"fonts.main.name", type: :string, as: :font_name
+  variable :"fonts.main.size", type: :int, as: :font_size
 end -%>
 " ─────────────────────────────────────────────────────────────────────────────┘
 
