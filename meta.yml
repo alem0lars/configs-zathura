@@ -1,7 +1,7 @@
 elems:
 
   - src: elems/(zathurarc)$
-    dst: ~/.<1>
+    dst: ~/.config/zathura/<1>
     only:
       features:
         - zathura
