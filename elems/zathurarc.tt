@@ -33,6 +33,36 @@
 <% define_locals do
   variable :"fonts.main.name", type: :string, as: :font_name
   variable :"fonts.main.size", type: :int, as: :font_size
+
+  # (Dark) Colorscheme ───────────────────────────────────────────────────┐
+  # ────── NAME ────────────────────   COLOR    ────────── NOTES ─────────┤
+  computed(:color_bg)               {"#202020"}  #                        │
+  computed(:color_fg)               {"#acacac"}  #                        │
+  #                                                                       │
+  computed(:color_statusbar_bg)     {"#101010"}  #                        │
+  computed(:color_statusbar_fg)     {"#808080"}  #                        │
+  #                                                                       │
+  computed(:color_inputbar_bg)      {"#101010"}  #                        │
+  computed(:color_inputbar_fg)      {"#6699cc"}  # TomorrowNight → Blue   │
+  #                                                                       │
+  computed(:color_notif_bg)         {"#66cccc"}  # TomorrowNight → Aqua   │
+  computed(:color_notif_fg)         {"#101010"}  #                        │
+  #                                                                       │
+  computed(:color_notif_error_bg)   {"#f2777a"}  # TomorrowNight → Red    │
+  computed(:color_notif_error_fg)   {"#101010"}  #                        │
+  #                                                                       │
+  computed(:color_notif_warning_bg) {"#f99157"}  # TomorrowNight → Orange │
+  computed(:color_notif_warning_fg) {"#101010"}  #                        │
+  #                                                                       │
+  computed(:color_highlight)        {"#ffcc66"}  # TomorrowNight → Yellow │
+  computed(:color_highlight_active) {"#f99157"}  # TomorrowNight → Orange │
+  #                                                                       │
+  computed(:color_highlight_bg)     {"#99cc99"}  # TomorrowNight → Green  │
+  computed(:color_highlight_fg)     {"#101010"}  #                        │
+  #                                                                       │
+  computed(:color_completion_bg)    {"#2c2c2c"}  #                        │
+  computed(:color_completion_fg)    {"#99cc99"}  # TomorrowNight → Green  │
+  # ──────────────────────────────────────────────────────────────────────┘
 end -%>
 " ─────────────────────────────────────────────────────────────────────────────┘
 
@@ -42,6 +72,40 @@ end -%>
 set guioptions cshv
 set font "<%= local! :font_name %> <%= local! :font_size %>"
 set window-title-basename "true"
+" ─────────────────────────────────────────────────────────────────────────────┐
+" Theme (based on Tomorrow Night)
+set default-bg "<%= local! :color_bg %>"
+set default-fg "<%= local! :color_fg %>"
+
+set statusbar-bg "<%= local! :color_statusbar_bg %>"
+set statusbar-fg "<%= local! :color_statusbar_fg %>"
+
+set inputbar-bg "<%= local! :color_inputbar_bg %>"
+set inputbar-fg "<%= local! :color_inputbar_fg %>"
+
+set notification-bg "<%= local! :color_notif_bg %>"
+set notification-fg "<%= local! :color_notif_fg %>"
+
+set notification-error-bg "<%= local! :color_notif_error_bg %>"
+set notification-error-fg "<%= local! :color_notif_error_fg %>"
+
+set notification-warning-bg "<%= local! :color_notif_warning_bg %>"
+set notification-warning-fg "<%= local! :color_notif_warning_fg %>"
+
+set highlight-color        "<%= local! :color_highlight %>"
+set highlight-active-color "<%= local! :color_highlight_active %>"
+
+set completion-highlight-bg "<%= local! :color_highlight_bg %>"
+set completion-highlight-fg "<%= local! :color_highlight_fg %>"
+
+set completion-bg "<%= local! :color_completion_bg %>"
+set completion-fg "<%= local! :color_completion_fg %>"
+
+set recolor "true"
+set recolor-lightcolor "<%= local! :color_bg %>"
+set recolor-darkcolor "<%= local! :color_fg %>"
+set recolor-reverse-video "true"
+set recolor-keephue "true"
 " ─────────────────────────────────────────────────────────────────────────────┤
 " Reading view ────────────────────────────────────────────────────────────────┤
 set adjust-open width "true"
