@@ -42,8 +42,6 @@ end -%>
 set guioptions cshv
 set font "<%= local! :font_name %> <%= local! :font_size %>"
 set window-title-basename "true"
-set recolor "true"
-set recolor-keephue "true"
 " ─────────────────────────────────────────────────────────────────────────────┤
 " Reading view ────────────────────────────────────────────────────────────────┤
 set adjust-open width "true"
