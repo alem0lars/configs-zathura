@@ -41,18 +41,25 @@ end -%>
 " Show commandline, statusbar, horizontal and vertical scrollview.
 set guioptions cshv
 set font "<%= local! :font_name %> <%= local! :font_size %>"
-set window-title-basename true
-set recolor
-set recolor-keephue
+set window-title-basename "true"
+set recolor "true"
+set recolor-keephue "true"
 " ─────────────────────────────────────────────────────────────────────────────┤
 " Reading view ────────────────────────────────────────────────────────────────┤
-set adjust-open width
+set adjust-open width "true"
 " ─────────────────────────────────────────────────────────────────────────────┤
 " Search
-set incremental-search true
+set incremental-search "true"
+set nohlsearch "false"
+set jumplist-size 2048
 " ─────────────────────────────────────────────────────────────────────────────┤
-" LaTeX integration
-set synctex true
+" Integration
+set synctex "true"
+set dbus-service "true"
+" ─────────────────────────────────────────────────────────────────────────────┤
+" File navigation
+set show-directories "true"
+set show-recent "false"
 " ─────────────────────────────────────────────────────────────────────────────┘
 
 " vim: set filetype=eruby.vim :
