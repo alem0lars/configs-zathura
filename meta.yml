@@ -1,9 +1,8 @@
 elems:
 
-  - src: elems/(zathurarc)$
-    dst: ~/.config/zathura/<1>
-    only:
-      features:
-        - zathura
+  - src:  ^(zathurarc)$
+    dst:  '<%= get_var! :"zathura.rc_path", type: :directory %>'
+    only: f?zathura
+
 
 # vim: set filetype=eruby.yaml :

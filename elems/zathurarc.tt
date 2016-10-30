@@ -32,48 +32,47 @@
 " ─────────────────────────────────────────────────────────────────────────────┤
 <% define_locals do
   variable :"fonts.main.name", type: :string, as: :font_name
-  variable :"fonts.main.size", type: :int, as: :font_size
+  variable :"fonts.main.size", type: :int,    as: :font_size
 
-  # (Dark) Colorscheme ───────────────────────────────────────────────────┐
-  # ────── NAME ────────────────────   COLOR    ────────── NOTES ─────────┤
-  computed(:color_bg)               {"#202020"}  #                        │
-  computed(:color_fg)               {"#acacac"}  #                        │
-  #                                                                       │
-  computed(:color_statusbar_bg)     {"#101010"}  #                        │
-  computed(:color_statusbar_fg)     {"#808080"}  #                        │
-  #                                                                       │
-  computed(:color_inputbar_bg)      {"#101010"}  #                        │
-  computed(:color_inputbar_fg)      {"#6699cc"}  # TomorrowNight → Blue   │
-  #                                                                       │
-  computed(:color_notif_bg)         {"#66cccc"}  # TomorrowNight → Aqua   │
-  computed(:color_notif_fg)         {"#101010"}  #                        │
-  #                                                                       │
-  computed(:color_notif_error_bg)   {"#f2777a"}  # TomorrowNight → Red    │
-  computed(:color_notif_error_fg)   {"#101010"}  #                        │
-  #                                                                       │
-  computed(:color_notif_warning_bg) {"#f99157"}  # TomorrowNight → Orange │
-  computed(:color_notif_warning_fg) {"#101010"}  #                        │
-  #                                                                       │
-  computed(:color_highlight)        {"#ffcc66"}  # TomorrowNight → Yellow │
-  computed(:color_highlight_active) {"#f99157"}  # TomorrowNight → Orange │
-  #                                                                       │
-  computed(:color_highlight_bg)     {"#99cc99"}  # TomorrowNight → Green  │
-  computed(:color_highlight_fg)     {"#101010"}  #                        │
-  #                                                                       │
-  computed(:color_completion_bg)    {"#2c2c2c"}  #                        │
-  computed(:color_completion_fg)    {"#99cc99"}  # TomorrowNight → Green  │
-  # ──────────────────────────────────────────────────────────────────────┘
-end -%>
+  # (Dark) Colorscheme ─────────────────────────────────────────────────────┐
+  # ────── NAME ────────────────────   COLOR      ────────── NOTES ─────────┤
+  computed(:color_bg)               { "#202020" }  #                        │
+  computed(:color_fg)               { "#acacac" }  #                        │
+  #                                                                         │
+  computed(:color_statusbar_bg)     { "#101010" }  #                        │
+  computed(:color_statusbar_fg)     { "#808080" }  #                        │
+  #                                                                         │
+  computed(:color_inputbar_bg)      { "#101010" }  #                        │
+  computed(:color_inputbar_fg)      { "#6699cc" }  # TomorrowNight → Blue   │
+  #                                                                         │
+  computed(:color_notif_bg)         { "#66cccc" }  # TomorrowNight → Aqua   │
+  computed(:color_notif_fg)         { "#101010" }  #                        │
+  #                                                                         │
+  computed(:color_notif_error_bg)   { "#f2777a" }  # TomorrowNight → Red    │
+  computed(:color_notif_error_fg)   { "#101010" }  #                        │
+  #                                                                         │
+  computed(:color_notif_warning_bg) { "#f99157" }  # TomorrowNight → Orange │
+  computed(:color_notif_warning_fg) { "#101010" }  #                        │
+  #                                                                         │
+  computed(:color_highlight)        { "#ffcc66" }  # TomorrowNight → Yellow │
+  computed(:color_highlight_active) { "#f99157" }  # TomorrowNight → Orange │
+  #                                                                         │
+  computed(:color_highlight_bg)     { "#99cc99" }  # TomorrowNight → Green  │
+  computed(:color_highlight_fg)     { "#101010" }  #                        │
+  #                                                                         │
+  computed(:color_completion_bg)    { "#2c2c2c" }  #                        │
+  computed(:color_completion_fg)    { "#99cc99" }  # TomorrowNight → Green  │
+  # ────────────────────────────────────────────────────────────────────────┘
+end %>
 " ─────────────────────────────────────────────────────────────────────────────┘
 
-" ─────────────────────────────────────────────────────────────────────────────┐
-" Appearance
+
+" ─────────────────────────────────────────────────────────────── Appearance ──┐
 " Show commandline, statusbar, horizontal and vertical scrollview.
 set guioptions cshv
 set font "<%= local! :font_name %> <%= local! :font_size %>"
 set window-title-basename "true"
-" ─────────────────────────────────────────────────────────────────────────────┐
-" Theme (based on Tomorrow Night)
+" ──────────────────────────────────────────────────────────────────── Theme ──┤
 set default-bg "<%= local! :color_bg %>"
 set default-fg "<%= local! :color_fg %>"
 
@@ -104,24 +103,17 @@ set completion-fg "<%= local! :color_completion_fg %>"
 set recolor "true"
 set recolor-lightcolor "<%= local! :color_bg %>"
 set recolor-darkcolor "<%= local! :color_fg %>"
-set recolor-reverse-video "true"
 set recolor-keephue "true"
-" ─────────────────────────────────────────────────────────────────────────────┤
-" Reading view ────────────────────────────────────────────────────────────────┤
-set adjust-open width "true"
-" ─────────────────────────────────────────────────────────────────────────────┤
-" Search
+" ─────────────────────────────────────────────────────────────────── Search ──┤
 set incremental-search "true"
 set nohlsearch "false"
 set jumplist-size 2048
-" ─────────────────────────────────────────────────────────────────────────────┤
-" Integration
+" ────────────────────────────────────────────────────────────── Integration ──┤
 set synctex "true"
 set dbus-service "true"
-" ─────────────────────────────────────────────────────────────────────────────┤
-" File navigation
+" ────────────────────────────────────────────────────────── File Navigation ──┤
 set show-directories "true"
-set show-recent "false"
 " ─────────────────────────────────────────────────────────────────────────────┘
+
 
 " vim: set filetype=eruby.vim :

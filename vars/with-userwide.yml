@@ -1,0 +1,5 @@
+zathura:
+  rc_file: <%= xdg_config_home(:zathura).join("zathurarc") %>
+
+
+# vim: set filetype=eruby.yaml :

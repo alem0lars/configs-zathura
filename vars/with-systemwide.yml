@@ -1,0 +1,5 @@
+zathura:
+  rc_path: /etc/zathurarc
+
+
+# vim: set filetype=eruby.yaml :

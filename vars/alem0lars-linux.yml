@@ -1,6 +1,0 @@
-# => inherits: generic <= #
-
-fonts:
-  main:
-    name: PragmataPro
-    size: 13
