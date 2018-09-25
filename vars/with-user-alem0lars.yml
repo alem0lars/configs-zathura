@@ -1,4 +1,7 @@
 fonts:
   main:
-    name: Hack
+    name: Fira Sans Light
     size: 11
+
+
+# vim: set filetype=eruby.yaml :
