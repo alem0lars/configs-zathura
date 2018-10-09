@@ -69,41 +69,42 @@ end %>
 
 " ─────────────────────────────────────────────────────────────── Appearance ──┐
 " Show commandline, statusbar, horizontal and vertical scrollview.
-set guioptions cshv
+" set guioptions cshv
 set font "<%= local! :font_name %> <%= local! :font_size %>"
 set window-title-basename "true"
 " ──────────────────────────────────────────────────────────────────── Theme ──┤
-set default-bg "<%= local! :color_bg %>"
-set default-fg "<%= local! :color_fg %>"
-
-set statusbar-bg "<%= local! :color_statusbar_bg %>"
-set statusbar-fg "<%= local! :color_statusbar_fg %>"
-
-set inputbar-bg "<%= local! :color_inputbar_bg %>"
-set inputbar-fg "<%= local! :color_inputbar_fg %>"
-
-set notification-bg "<%= local! :color_notif_bg %>"
-set notification-fg "<%= local! :color_notif_fg %>"
-
-set notification-error-bg "<%= local! :color_notif_error_bg %>"
-set notification-error-fg "<%= local! :color_notif_error_fg %>"
-
-set notification-warning-bg "<%= local! :color_notif_warning_bg %>"
-set notification-warning-fg "<%= local! :color_notif_warning_fg %>"
-
-set highlight-color        "<%= local! :color_highlight %>"
-set highlight-active-color "<%= local! :color_highlight_active %>"
-
-set completion-highlight-bg "<%= local! :color_highlight_bg %>"
-set completion-highlight-fg "<%= local! :color_highlight_fg %>"
-
-set completion-bg "<%= local! :color_completion_bg %>"
-set completion-fg "<%= local! :color_completion_fg %>"
-
-set recolor "true"
-set recolor-lightcolor "<%= local! :color_bg %>"
-set recolor-darkcolor "<%= local! :color_fg %>"
-set recolor-keephue "true"
+" TODO fix theme
+" set default-bg "<%= local! :color_bg %>"
+" set default-fg "<%= local! :color_fg %>"
+"
+" set statusbar-bg "<%= local! :color_statusbar_bg %>"
+" set statusbar-fg "<%= local! :color_statusbar_fg %>"
+"
+" set inputbar-bg "<%= local! :color_inputbar_bg %>"
+" set inputbar-fg "<%= local! :color_inputbar_fg %>"
+"
+" set notification-bg "<%= local! :color_notif_bg %>"
+" set notification-fg "<%= local! :color_notif_fg %>"
+"
+" set notification-error-bg "<%= local! :color_notif_error_bg %>"
+" set notification-error-fg "<%= local! :color_notif_error_fg %>"
+"
+" set notification-warning-bg "<%= local! :color_notif_warning_bg %>"
+" set notification-warning-fg "<%= local! :color_notif_warning_fg %>"
+"
+" set highlight-color        "<%= local! :color_highlight %>"
+" set highlight-active-color "<%= local! :color_highlight_active %>"
+"
+" set completion-highlight-bg "<%= local! :color_highlight_bg %>"
+" set completion-highlight-fg "<%= local! :color_highlight_fg %>"
+"
+" set completion-bg "<%= local! :color_completion_bg %>"
+" set completion-fg "<%= local! :color_completion_fg %>"
+"
+" set recolor "true"
+" set recolor-lightcolor "<%= local! :color_bg %>"
+" set recolor-darkcolor "<%= local! :color_fg %>"
+" set recolor-keephue "true"
 " ─────────────────────────────────────────────────────────────────── Search ──┤
 set incremental-search "true"
 set nohlsearch "false"
